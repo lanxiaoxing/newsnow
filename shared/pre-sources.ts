@@ -49,13 +49,12 @@ export const originSources = {
     desc: "来自第三方网站: 早晨报",
     home: "https://www.zaobao.com",
   },
-  "coolapk": {
-    name: "酷安",
-    type: "hottest",
-    column: "tech",
+  "ithome": {
+    name: "IT之家",
     color: "green",
-    title: "今日最热",
-    home: "https://coolapk.com",
+    column: "tech",
+    type: "hottest",
+    home: "https://www.ithome.com",
   },
   "wallstreetcn": {
     name: "华尔街见闻",
@@ -120,12 +119,13 @@ export const originSources = {
     color: "red",
     home: "https://www.toutiao.com",
   },
-  "ithome": {
-    name: "IT之家",
-    color: "red",
+  "coolapk": {
+    name: "酷安",
+    type: "hottest",
     column: "tech",
-    type: "realtime",
-    home: "https://www.ithome.com",
+    color: "green",
+    title: "今日最热",
+    home: "https://coolapk.com",
   },
   "thepaper": {
     name: "澎湃新闻",
@@ -224,13 +224,13 @@ export const originSources = {
     type: "hottest",
     home: "https://news.ycombinator.com/",
   },
-  "producthunt": {
-    name: "Product Hunt",
-    color: "red",
-    column: "tech",
-    type: "hottest",
-    home: "https://www.producthunt.com/",
-  },
+  // "producthunt": {
+  //   name: "Product Hunt",
+  //   color: "red",
+  //   column: "tech",
+  //   type: "hottest",
+  //   home: "https://www.producthunt.com/",
+  // },
   "github": {
     name: "Github",
     color: "gray",
