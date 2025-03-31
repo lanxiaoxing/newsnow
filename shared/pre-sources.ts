@@ -56,6 +56,13 @@ export const originSources = {
     type: "hottest",
     home: "https://www.ithome.com",
   },
+  "smzdm": {
+    name: "什么值得买",
+    color: "orange",
+    column: "tech",
+    type: "hottest",
+    home: "https://www.smzdm.com",
+  },
   "wallstreetcn": {
     name: "华尔街见闻",
     color: "blue",
