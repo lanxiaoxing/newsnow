@@ -9,7 +9,7 @@ export default defineSource(async () => {
   $main.each((_, el) => {
     const $el = $(el)
     const $a = $el.find("a")
-    const url = $a.attr("href")
+    const url = new URL($a.attr("href")!, "https://www.guozaoke.com").toString()
     const title = $a.text()
     if (url && title) {
       news.push({
