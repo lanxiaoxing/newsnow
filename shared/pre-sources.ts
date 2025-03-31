@@ -63,6 +63,13 @@ export const originSources = {
     type: "hottest",
     home: "https://www.smzdm.com",
   },
+  "guozaoke": {
+    name: "过早客",
+    color: "gray",
+    column: "tech",
+    type: "hottest",
+    home: "https://www.guozaoke.com",
+  },
   "wallstreetcn": {
     name: "华尔街见闻",
     color: "blue",
