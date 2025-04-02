@@ -113,6 +113,13 @@ export const originSources = {
     color: "gray",
     home: "https://www.douyin.com",
   },
+  "ifanr": {
+    name: "爱范儿",
+    type: "hottest",
+    column: "tech",
+    color: "purple",
+    home: "https://www.ifanr.com/",
+  },
   "hupu": {
     name: "虎扑",
     disable: true,
