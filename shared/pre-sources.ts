@@ -113,6 +113,13 @@ export const originSources = {
     color: "gray",
     home: "https://www.douyin.com",
   },
+  "wapo": {
+    name: "华盛顿邮报",
+    type: "hottest",
+    column: "world",
+    color: "rose",
+    home: "https://www.washingtonpost.com/",
+  },
   "ifanr": {
     name: "爱范儿",
     type: "hottest",

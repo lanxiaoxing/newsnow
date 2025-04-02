@@ -131,6 +131,14 @@
     "color": "gray",
     "interval": 600000
   },
+  "wapo": {
+    "name": "华盛顿邮报",
+    "type": "hottest",
+    "column": "world",
+    "home": "https://www.washingtonpost.com/",
+    "color": "rose",
+    "interval": 600000
+  },
   "ifanr": {
     "name": "爱范儿",
     "type": "hottest",
