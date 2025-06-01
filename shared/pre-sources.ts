@@ -24,13 +24,6 @@ export const originSources = {
       },
     },
   },
-  "zhihu": {
-    name: "知乎",
-    type: "hottest",
-    column: "china",
-    color: "blue",
-    home: "https://www.zhihu.com",
-  },
   "weibo": {
     name: "微博",
     title: "实时热搜",
@@ -306,25 +299,6 @@ export const originSources = {
     color: "blue",
     type: "hottest",
     home: "https://www.baidu.com",
-  },
-  "linuxdo": {
-    name: "LINUX DO",
-    column: "tech",
-    color: "slate",
-    home: "https://linux.do/",
-    disable: "cf",
-    sub: {
-      latest: {
-        title: "最新",
-        home: "https://linux.do/latest",
-      },
-      hot: {
-        title: "今日最热",
-        type: "hottest",
-        interval: Time.Common,
-        home: "https://linux.do/hot",
-      },
-    },
   },
 } as const satisfies Record<string, OriginSource>
 
