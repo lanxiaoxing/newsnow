@@ -9,9 +9,10 @@ export default defineSource(async () => {
   const news: NewsItem[] = []
 
   $main.each((_, el) => {
-    const a = $(el).find("a")
-    const url = a.attr("href")!
-    const title = a.text()
+    const $el = $(el)
+    const $a = $el.find("a")
+    const url = $a.attr("href")!
+    const title = $a.text()
     if (url && title) {
       news.push({
         url,
@@ -20,5 +21,6 @@ export default defineSource(async () => {
       })
     }
   })
+
   return news
 })
