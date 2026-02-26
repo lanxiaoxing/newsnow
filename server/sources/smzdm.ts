@@ -1,26 +1,13 @@
-import * as cheerio from "cheerio"
-import type { NewsItem } from "@shared/types"
+import { rss2json } from "../utils/rss2json"
 
 export default defineSource(async () => {
-  const baseURL = "https://readhub.cn/daily/"
-  const html: any = await myFetch(baseURL)
-  const $ = cheerio.load(html)
-  const $main = $(".style_list__UO_gs .style_title__OBXz_")
-  const news: NewsItem[] = []
-
-  $main.each((_, el) => {
-    const $el = $(el)
-    const $a = $el.find("a")
-    const url = $a.attr("href")!
-    const title = $a.text()
-    if (url && title) {
-      news.push({
-        url,
-        title,
-        id: url,
-      })
-    }
-  })
-
-  return news
+  const baseURL = "http://feed.smzdm.com"
+  const res = await rss2json(baseURL)
+  const items = res?.items || []
+  return items.map((k: any) => ({
+    id: k.id || k.link,
+    title: k.title,
+    url: k.link,
+    pubDate: k.created,
+  }))
 })
