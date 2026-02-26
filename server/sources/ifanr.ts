@@ -1,23 +1,14 @@
-import * as cheerio from "cheerio"
-import type { NewsItem } from "@shared/types"
+import { rss2json } from "../utils/rss2json"
 
 export default defineSource(async () => {
-  const response: any = await myFetch("https://www.ifanr.com/")
-  const $ = cheerio.load(response)
-  const $main = $("#collectionList > div.article-container > div.article-item > div.article-info > h3")
-  const news: NewsItem[] = []
-  $main.each((_, el) => {
-    const $el = $(el)
-    const $a = $el.find("a")
-    const url = $a.attr("href")
-    const title = $a.text()
-    if (url && title) {
-      news.push({
-        url,
-        title,
-        id: url,
-      })
-    }
-  })
-  return news
+  const url = "https://www.ifanr.com/feed"
+  const res = await rss2json(url)
+  const items = res?.items || []
+
+  return items.map((item: any) => ({
+    id: item.link || item.id,
+    title: item.title,
+    url: item.link,
+    pubDate: item.created,
+  }))
 })
