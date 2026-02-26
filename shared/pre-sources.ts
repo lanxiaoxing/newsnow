@@ -150,6 +150,26 @@ export const originSources = {
     color: "gray",
     home: "https://www.thepaper.cn",
   },
+  "wuhan": {
+    name: "武汉天气",
+    color: "pink",
+    type: "hottest", // 移动到最热板块
+    interval: Time.Slow, // 1小时更新一次，天气变化较慢
+    home: "https://www.weather.com.cn",
+    desc: "武汉未来7天天气预报",
+    sub: {
+      forecast: {
+        title: "7天天气预报",
+        type: "hottest",
+        interval: Time.Slow,
+      },
+      current: {
+        title: "实时天气",
+        type: "hottest",
+        interval: Time.Common,
+      },
+    },
+  },
   "sputniknewscn": {
     name: "卫星通讯社",
     color: "orange",

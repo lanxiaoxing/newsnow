@@ -1,6 +1,5 @@
 {
   "v2ex-share": "V2EX-zuixinfenxiang",
-  "zhihu": "zhihu",
   "weibo": "weibo-shishiresou",
   "zaobao": "lianhezaobao",
   "ithome": "ITzhijia",
@@ -9,15 +8,14 @@
   "wallstreetcn-quick": "huaerjiejianwen-shishikuaixun",
   "wallstreetcn-news": "huaerjiejianwen-zuixinzixun",
   "wallstreetcn-hot": "huaerjiejianwen-zuirewenzhang",
-  "36kr-quick": "36ke-kuaixun",
   "douyin": "douyin",
-  "wapo": "huashengdunyoubao",
   "ifanr": "aifaner",
   "tieba": "baidutieba-reyi",
   "toutiao": "jinritoutiao",
   "coolapk": "kuan-jinrizuire",
   "thepaper": "pengpaixinwen-rebang",
-  "sputniknewscn": "weixingtongxunshe",
+  "wuhan-forecast": "wuhantianqi-7tiantianqiyubao",
+  "wuhan-current": "wuhantianqi-shishitianqi",
   "cankaoxiaoxi": "cankaoxiaoxi",
   "cls-telegraph": "cailianshe-dianbao",
   "cls-depth": "cailianshe-shendu",
@@ -30,10 +28,7 @@
   "hackernews": "Hacker News",
   "github-trending-today": "Github-Today",
   "bilibili-hot-search": "bilibili-resou",
-  "kuaishou": "kuaishou",
   "kaopu": "kaopuxinwen",
   "jin10": "jinshishuju",
-  "baidu": "baiduresou",
-  "linuxdo-latest": "LINUX DO-zuixin",
-  "linuxdo-hot": "LINUX DO-jinrizuire"
+  "baidu": "baiduresou"
 }
