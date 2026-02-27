@@ -19,12 +19,17 @@ const WIDTH = 350
 export function Dnd() {
   const [items, setItems] = useAtom(currentSourcesAtom)
   const [parent] = useAutoAnimate({ duration: AnimationDuration })
-  useEntireQuery(items)
+  const { isFetched, isSuccess } = useEntireQuery(items)
   const { width } = useWindowSize()
   const minWidth = useMemo(() => {
     // double padding = 32
     return Math.min(width - 32, WIDTH)
   }, [width])
+
+  // Flag to indicate if we should render cards
+  // Render cards if bulk fetch is successful, OR if it's already fetched (even if failed/empty),
+  // ensuring we don't block forever if the database is empty or network fails.
+  const shouldRenderCards = isFetched || isSuccess
 
   return (
     <DndWrapper items={items} setItems={setItems}>
@@ -49,7 +54,7 @@ export function Dnd() {
           },
         }}
       >
-        {items.map(id => (
+        {shouldRenderCards && items.map(id => (
           <motion.li
             key={id}
             transition={{

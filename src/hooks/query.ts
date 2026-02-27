@@ -19,7 +19,7 @@ export function useUpdateQuery() {
 
 export function useEntireQuery(items: SourceID[]) {
   const update = useUpdateQuery()
-  useQuery({
+  const result = useQuery({
     // sort in place
     queryKey: ["entire", [...items].sort()],
     queryFn: async ({ queryKey }) => {
@@ -50,4 +50,9 @@ export function useEntireQuery(items: SourceID[]) {
     staleTime: 1000 * 60 * 3,
     retry: false,
   })
+
+  return {
+    isFetched: result.isFetched,
+    isSuccess: result.isSuccess,
+  }
 }

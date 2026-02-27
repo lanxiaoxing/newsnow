@@ -18,6 +18,7 @@ export interface ItemsProps extends React.HTMLAttributes<HTMLDivElement> {
 interface NewsCardProps {
   id: SourceID
   setHandleRef?: (ref: HTMLElement | null) => void
+  inView?: boolean
 }
 
 export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging, setHandleRef, style, ...props }, dndRef) => {
@@ -45,12 +46,12 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
       }}
       {...props}
     >
-      {inView && <NewsCard id={id} setHandleRef={setHandleRef} />}
+      <NewsCard id={id} setHandleRef={setHandleRef} inView={inView} />
     </div>
   )
 })
 
-function NewsCard({ id, setHandleRef }: NewsCardProps) {
+function NewsCard({ id, setHandleRef, inView }: NewsCardProps) {
   const { refresh } = useRefetch()
   const { data, isFetching, isError } = useQuery({
     queryKey: ["source", id],
@@ -94,6 +95,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
       cacheSources.set(id, response)
       return response
     },
+    enabled: inView,
     placeholderData: prev => prev,
     staleTime: Infinity,
     refetchOnMount: false,
@@ -189,7 +191,7 @@ function DiffNumber({ diff }: { diff: number }) {
 
   return (
     <AnimatePresence>
-      { shown && (
+      {shown && (
         <motion.span
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 0.5, y: -7 }}
