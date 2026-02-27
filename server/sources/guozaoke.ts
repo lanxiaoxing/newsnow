@@ -2,9 +2,9 @@ import * as cheerio from "cheerio"
 import type { NewsItem } from "@shared/types"
 
 export default defineSource(async () => {
-  const response: any = await myFetch("https://www.guozaoke.com/", {
-    responseType: "text",
-  })
+  const response: string = await myFetch("https://www.guozaoke.com/")
+  if (!response) return []
+
   const $ = cheerio.load(response)
   const $main = $("div.topics > div.topic-item > div.main > h3.title")
   const news: NewsItem[] = []
