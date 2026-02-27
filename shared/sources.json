@@ -50,14 +50,6 @@
     "color": "orange",
     "interval": 600000
   },
-  "guozaoke": {
-    "name": "过早客",
-    "type": "hottest",
-    "column": "tech",
-    "home": "https://www.guozaoke.com",
-    "color": "gray",
-    "interval": 600000
-  },
   "wallstreetcn": {
     "redirect": "wallstreetcn-quick",
     "name": "华尔街见闻",
@@ -146,32 +138,12 @@
     "interval": 1800000
   },
   "wuhan": {
-    "redirect": "wuhan-forecast",
     "name": "武汉天气",
     "type": "hottest",
-    "desc": "武汉未来7天天气预报",
+    "desc": "武汉实时天气与未来预报",
     "home": "https://www.weather.com.cn",
     "color": "pink",
-    "interval": 3600000,
-    "title": "7天天气预报"
-  },
-  "wuhan-forecast": {
-    "name": "武汉天气",
-    "type": "hottest",
-    "desc": "武汉未来7天天气预报",
-    "home": "https://www.weather.com.cn",
-    "color": "pink",
-    "interval": 3600000,
-    "title": "7天天气预报"
-  },
-  "wuhan-current": {
-    "name": "武汉天气",
-    "type": "hottest",
-    "desc": "武汉未来7天天气预报",
-    "home": "https://www.weather.com.cn",
-    "color": "pink",
-    "interval": 1800000,
-    "title": "实时天气"
+    "interval": 3600000
   },
   "cankaoxiaoxi": {
     "name": "参考消息",

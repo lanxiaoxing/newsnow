@@ -56,13 +56,7 @@ export const originSources = {
     type: "hottest",
     home: "https://www.smzdm.com",
   },
-  "guozaoke": {
-    name: "过早客",
-    color: "gray",
-    column: "tech",
-    type: "hottest",
-    home: "https://www.guozaoke.com",
-  },
+
   "wallstreetcn": {
     name: "华尔街见闻",
     color: "blue",
@@ -153,22 +147,10 @@ export const originSources = {
   "wuhan": {
     name: "武汉天气",
     color: "pink",
-    type: "hottest", // 移动到最热板块
-    interval: Time.Slow, // 1小时更新一次，天气变化较慢
+    type: "hottest",
+    interval: Time.Slow,
     home: "https://www.weather.com.cn",
-    desc: "武汉未来7天天气预报",
-    sub: {
-      forecast: {
-        title: "7天天气预报",
-        type: "hottest",
-        interval: Time.Slow,
-      },
-      current: {
-        title: "实时天气",
-        type: "hottest",
-        interval: Time.Common,
-      },
-    },
+    desc: "武汉实时天气与未来预报",
   },
   "sputniknewscn": {
     name: "卫星通讯社",
