@@ -1,4 +1,11 @@
 {
+  "bbc": {
+    "name": "BBC News",
+    "type": "hottest",
+    "home": "https://www.bbc.com/news",
+    "color": "gray",
+    "interval": 1800000
+  },
   "v2ex": {
     "redirect": "v2ex-share",
     "name": "V2EX",

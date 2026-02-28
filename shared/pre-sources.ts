@@ -13,6 +13,13 @@ const Time = {
 }
 
 export const originSources = {
+  "bbc": {
+    name: "BBC News",
+    color: "gray",
+    type: "hottest",
+    home: "https://www.bbc.com/news",
+    interval: Time.Common,
+  },
   "v2ex": {
     name: "V2EX",
     color: "slate",
