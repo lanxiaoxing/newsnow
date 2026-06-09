@@ -117,11 +117,14 @@ function DndWrapper({ items, setItems, children }: PropsWithChildren<{
 function CardOverlay({ id }: { id: SourceID }) {
   return (
     <div className={$(
-      "flex flex-col p-4 backdrop-blur-5",
-      `bg-${sources[id].color}-500 dark:bg-${sources[id].color} bg-op-40!`,
+      "relative overflow-hidden flex flex-col p-4 backdrop-blur-md",
+      "border border-black/8 dark:border-white/10",
+      "bg-white/60 dark:bg-white/4",
       !isiOS() && "rounded-2xl",
     )}
     >
+      <span className={$("pointer-events-none absolute inset-x-0 top-0 h-2px", `bg-${sources[id].color}-500`)} />
+      <span className={$("pointer-events-none absolute left-1/2 top-0 h-12 w-2/3 -translate-x-1/2 rounded-full op-40 blur-2xl", `bg-${sources[id].color}-500`)} />
       <div className={$("flex justify-between mx-2 items-center")}>
         <div className="flex gap-2 items-center">
           <div

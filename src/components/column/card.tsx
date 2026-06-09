@@ -34,11 +34,12 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
     <div
       ref={ref}
       className={$(
-        "flex flex-col h-500px rounded-2xl p-4 cursor-default",
-        // "backdrop-blur-5",
+        "relative overflow-hidden flex flex-col h-500px rounded-2xl p-4 cursor-default",
+        "border border-black/8 dark:border-white/10 backdrop-blur-md",
+        "bg-white/60 dark:bg-white/4",
+        "shadow-lg shadow-black/5 dark:shadow-black/40",
         "transition-opacity-300",
         isDragging && "op-50",
-        `bg-${sources[id].color}-500 dark:bg-${sources[id].color} bg-op-40!`,
       )}
       style={{
         transformOrigin: "50% 50%",
@@ -46,6 +47,9 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
       }}
       {...props}
     >
+      {/* 顶部品牌色发光条 + 柔光晕 */}
+      <span className={$("pointer-events-none absolute inset-x-0 top-0 h-2px", `bg-${sources[id].color}-500`)} />
+      <span className={$("pointer-events-none absolute left-1/2 top-0 h-12 w-2/3 -translate-x-1/2 rounded-full op-40 blur-2xl", `bg-${sources[id].color}-500`)} />
       <NewsCard id={id} setHandleRef={setHandleRef} inView={inView} />
     </div>
   )
@@ -155,7 +159,7 @@ function NewsCard({ id, setHandleRef, inView }: NewsCardProps) {
 
       <OverlayScrollbar
         className={$([
-          "h-full p-2 overflow-y-auto rounded-2xl bg-base bg-op-70!",
+          "h-full p-2 overflow-y-auto rounded-2xl",
           isFetching && `animate-pulse`,
           `sprinkle-${sources[id].color}`,
         ])}
@@ -165,7 +169,7 @@ function NewsCard({ id, setHandleRef, inView }: NewsCardProps) {
         defer
       >
         <div className={$("transition-opacity-500", isFetching && "op-20")}>
-          {!!data?.items?.length && (sources[id].type === "hottest" ? <NewsListHot items={data.items} /> : <NewsListTimeLine items={data.items} />)}
+          {!!data?.items?.length && (sources[id].type === "hottest" ? <NewsListHot items={data.items} color={sources[id].color} /> : <NewsListTimeLine items={data.items} />)}
         </div>
       </OverlayScrollbar>
     </>
@@ -227,7 +231,7 @@ function NewsUpdatedTime({ date }: { date: string | number }) {
   const relativeTime = useRelativeTime(date)
   return <>{relativeTime}</>
 }
-function NewsListHot({ items }: { items: NewsItem[] }) {
+function NewsListHot({ items, color }: { items: NewsItem[], color: string }) {
   const { width } = useWindowSize()
   return (
     <ol className="flex flex-col gap-2">
@@ -238,11 +242,17 @@ function NewsListHot({ items }: { items: NewsItem[] }) {
           key={item.id}
           title={item.extra?.hover}
           className={$(
-            "flex gap-2 items-center items-stretch relative",
+            "flex gap-2 items-start relative",
             "hover:bg-neutral-400/10 rounded-md pr-1 visited:(text-neutral-400)",
           )}
         >
-          <span className={$("bg-neutral-400/10 min-w-6 flex justify-center items-center rounded-md text-sm")}>
+          <span className={$(
+            "min-w-6 h-6 shrink-0 flex justify-center items-center rounded-md text-sm font-semibold",
+            i < 3
+              ? `bg-${color}-500 color-white`
+              : "bg-neutral-500/15 op-90",
+          )}
+          >
             {i + 1}
           </span>
           {!!item.extra?.diff && <DiffNumber diff={item.extra.diff} />}
@@ -266,7 +276,7 @@ function NewsListTimeLine({ items }: { items: NewsItem[] }) {
     <ol className="border-s border-neutral-400/50 flex flex-col ml-1">
       {items?.map(item => (
         <li key={`${item.id}-${item.pubDate || item?.extra?.date || ""}`} className="flex flex-col">
-          <span className="flex items-center gap-1 text-neutral-400/50 ml--1px">
+          <span className="flex items-center gap-1 text-neutral-400/70 ml--1px">
             <span className="">-</span>
             <span className="text-xs text-neutral-400/80">
               {(item.pubDate || item?.extra?.date) && <NewsUpdatedTime date={(item.pubDate || item?.extra?.date)!} />}

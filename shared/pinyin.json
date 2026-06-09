@@ -8,6 +8,7 @@
   "wallstreetcn-quick": "huaerjiejianwen-shishikuaixun",
   "wallstreetcn-news": "huaerjiejianwen-zuixinzixun",
   "wallstreetcn-hot": "huaerjiejianwen-zuirewenzhang",
+  "36kr-quick": "36ke-kuaixun",
   "douyin": "douyin",
   "ifanr": "aifaner",
   "tieba": "baidutieba-reyi",
@@ -15,6 +16,7 @@
   "coolapk": "kuan-jinrizuire",
   "thepaper": "pengpaixinwen-rebang",
   "wuhan": "wuhantianqi",
+  "sputniknewscn": "weixingtongxunshe",
   "cankaoxiaoxi": "cankaoxiaoxi",
   "cls-telegraph": "cailianshe-dianbao",
   "cls-depth": "cailianshe-shendu",
@@ -27,6 +29,7 @@
   "hackernews": "Hacker News",
   "github-trending-today": "Github-Today",
   "bilibili-hot-search": "bilibili-resou",
+  "kuaishou": "kuaishou",
   "kaopu": "kaopuxinwen",
   "jin10": "jinshishuju",
   "baidu": "baiduresou"

@@ -31,18 +31,7 @@ interface Res {
   }
 }
 
-const hot = defineSource(async () => {
-  const res = await myFetch<Res>("https://linux.do/top/daily.json")
-  return res.topic_list.topics
-    .filter(k => k.visible && !k.archived && !k.pinned)
-    .map(k => ({
-      id: k.id,
-      title: k.title,
-      url: `https://linux.do/t/topic/${k.id}`,
-    }))
-})
-
-const latest = defineSource(async () => {
+export default defineSource(async () => {
   const res = await myFetch<Res>("https://linux.do/latest.json?order=created")
   return res.topic_list.topics
     .filter(k => k.visible && !k.archived && !k.pinned)
@@ -52,10 +41,4 @@ const latest = defineSource(async () => {
       pubDate: new Date(k.created_at).valueOf(),
       url: `https://linux.do/t/topic/${k.id}`,
     }))
-})
-
-export default defineSource({
-  "linuxdo": latest,
-  "linuxdo-latest": latest,
-  "linuxdo-hot": hot,
 })
