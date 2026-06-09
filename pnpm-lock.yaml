@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  h3: 1.12.0
   cross-spawn: '>=7.0.6'
   dayjs: 1.11.13
   picomatch: ^4.0.2
@@ -82,8 +83,8 @@ importers:
         specifier: ^12.4.7
         version: 12.4.10(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       h3:
-        specifier: ^1.15.1
-        version: 1.15.1
+        specifier: 1.12.0
+        version: 1.12.0
       iconv-lite:
         specifier: ^0.6.3
         version: 0.6.3
@@ -224,8 +225,8 @@ importers:
         specifier: ^0.21.1
         version: 0.21.1(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))(workbox-build@7.3.0(@types/babel__core@7.20.5))(workbox-window@7.3.0)
       vite-plugin-with-nitro:
-        specifier: 0.0.3
-        version: 0.0.3(better-sqlite3@11.8.1)(crossws@0.3.4)(typescript@5.8.2)(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
+        specifier: ^0.0.5
+        version: 0.0.5(better-sqlite3@11.8.1)(typescript@5.8.2)(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
       vitest:
         specifier: ^3.0.7
         version: 3.0.7(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
@@ -3032,6 +3033,10 @@ packages:
     resolution: {integrity: sha512-EiPU8G6dQG0GFHNR8ljnZFki/8a+cQwEQ+7wpxdChl02Q8HXlwEZWD5lqAF8vC2sEC3Tehr8hy7vErz88LHyUA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
+  consola@3.4.2:
+    resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
@@ -3075,6 +3080,14 @@ packages:
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
+
+  crossws@0.2.4:
+    resolution: {integrity: sha512-DAxroI2uSOgUKLz00NX6A8U/8EE3SZHmIND+10jkVSaypvyt57J5JEOxAQOL6lQxyzi/wZbTIwssU1uy69h5Vg==}
+    peerDependencies:
+      uWebSockets.js: '*'
+    peerDependenciesMeta:
+      uWebSockets.js:
+        optional: true
 
   crossws@0.3.4:
     resolution: {integrity: sha512-uj0O1ETYX1Bh6uSgktfPvwDiPYGQ3aI4qVsaC/LWpkIzGj1nUYm5FK3K+t11oOlpN01lGbprFCH4wBlKdJjVgw==}
@@ -3983,18 +3996,8 @@ packages:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  h3-nightly@2.0.0-20260602-115454-7eb018e:
-    resolution: {integrity: sha512-KpKyVGOmt5uAtlsBK0MFcRLMqOIEd6RTTIdk5YynDcXClPOUWAbDjgbcbc/TakaPqVIQkONkjXlgrn6dPqAw3w==}
-    engines: {node: '>=20.11.1'}
-    hasBin: true
-    peerDependencies:
-      crossws: ^0.4.1
-    peerDependenciesMeta:
-      crossws:
-        optional: true
-
-  h3@1.15.1:
-    resolution: {integrity: sha512-+ORaOBttdUm1E2Uu/obAyCguiI7MbBvsLTndc3gyK3zU+SYLoZXlyCP9Xgy0gikkGufFLTZXCXD6+4BsufnmHA==}
+  h3@1.12.0:
+    resolution: {integrity: sha512-Zi/CcNeWBXDrFNlV0hUBJQR9F7a96RjMeAZweW/ZWkR9fuXrMcvKnSA63f/zZ9l0GgQOZDVHGvXivNN9PWOwhA==}
 
   has-bigints@1.1.0:
     resolution: {integrity: sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==}
@@ -4716,8 +4719,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nitro-go@0.0.1:
-    resolution: {integrity: sha512-oquSOY4P3WixYHMlDF782CgTiDabE0wi6LkcEVXNGzfCrp1m84WKydpARgwxqHJZorIq+mJHZbhkObaxHqhXeg==}
+  nitro-go@0.0.2:
+    resolution: {integrity: sha512-3rCdhJSCFaEtzwtPmw016z8RCRSLV0NVkcEXhO9cIy9yFpI1fEBDZaFRA/hqRKR7Ts3KtAc5u7FuXeyvzxNecA==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -4752,9 +4755,6 @@ packages:
   node-gyp-build@4.8.4:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
-
-  node-mock-http@1.0.0:
-    resolution: {integrity: sha512-0uGYQ1WQL1M5kKvGRXWQ3uZCHtLTO8hln3oBjIusM75WoesZ909uQJs/Hb946i2SS+Gsrhkaa6iAO17jRIv6DQ==}
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
@@ -5296,9 +5296,6 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rou3@0.8.1:
-    resolution: {integrity: sha512-ePa+XGk00/3HuCqrEnK3LxJW7I0SdNg6EFzKUJG73hMAdDcOUC/i/aSz7LSDwLrGr33kal/rqOGydzwl6U7zBA==}
-
   rtl-css-js@1.16.1:
     resolution: {integrity: sha512-lRQgou1mu19e+Ya0LsTvKrVJ5TYUbqCVPAiImX3UfLTenarvPUl1QFdvu5Z3PYmHT9RCcwIfbjRQBntExyj3Zg==}
 
@@ -5500,11 +5497,6 @@ packages:
 
   spdx-license-ids@3.0.21:
     resolution: {integrity: sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==}
-
-  srvx@0.11.16:
-    resolution: {integrity: sha512-bp07zRuycfTY43IjAvvTFnmnJi8ikW0VFiHwOhhYcVW/L4xQ1XY4PAd4Nuum1rsA17C39zL7x+CDhrn5AL32Rw==}
-    engines: {node: '>=20.16.0'}
-    hasBin: true
 
   stable-hash@0.0.4:
     resolution: {integrity: sha512-LjdcbuBeLcdETCrPn9i8AYAZ1eCtu4ECAWtP7UleOiZ9LzVxRzzUZEoZ8zB24nhkQnDWyET0I+3sWokSDS3E7g==}
@@ -6073,8 +6065,8 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
 
-  vite-plugin-with-nitro@0.0.3:
-    resolution: {integrity: sha512-KtAnIXNAaBRuWr2yG6XP1eECfGo0tj1WPzhTI1apypLXAhvA0TOLj8Ke/xSjQw9bT+3APjRxODyP3nsXUeJoBA==}
+  vite-plugin-with-nitro@0.0.5:
+    resolution: {integrity: sha512-eyM/4fduSqEbdGBkHKsLSFejSssGYwXV3Fk0anx9OQdl8VsYdzCnyQ0zyaoVbujIrdgyUbtUfIvKwnvKYhUuGA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       vite: ^6
@@ -7643,7 +7635,7 @@ snapshots:
 
   '@mapbox/node-pre-gyp@2.0.0':
     dependencies:
-      consola: 3.4.0
+      consola: 3.4.2
       detect-libc: 2.0.3
       https-proxy-agent: 7.0.6(supports-color@9.4.0)
       node-fetch: 2.7.0
@@ -9254,6 +9246,8 @@ snapshots:
 
   consola@3.4.0: {}
 
+  consola@3.4.2: {}
+
   convert-source-map@2.0.0: {}
 
   cookie-es@1.2.2: {}
@@ -9290,6 +9284,8 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  crossws@0.2.4: {}
 
   crossws@0.3.4:
     dependencies:
@@ -10414,24 +10410,20 @@ snapshots:
     dependencies:
       duplexer: 0.1.2
 
-  h3-nightly@2.0.0-20260602-115454-7eb018e(crossws@0.3.4):
-    dependencies:
-      rou3: 0.8.1
-      srvx: 0.11.16
-    optionalDependencies:
-      crossws: 0.3.4
-
-  h3@1.15.1:
+  h3@1.12.0:
     dependencies:
       cookie-es: 1.2.2
-      crossws: 0.3.4
+      crossws: 0.2.4
       defu: 6.1.4
       destr: 2.0.3
       iron-webcrypto: 1.2.1
-      node-mock-http: 1.0.0
+      ohash: 1.1.5
       radix3: 1.1.2
       ufo: 1.5.4
       uncrypto: 0.1.3
+      unenv: 1.10.0
+    transitivePeerDependencies:
+      - uWebSockets.js
 
   has-bigints@1.1.0: {}
 
@@ -10864,11 +10856,11 @@ snapshots:
       '@parcel/watcher-wasm': 2.5.1
       citty: 0.1.6
       clipboardy: 4.0.0
-      consola: 3.4.0
+      consola: 3.4.2
       crossws: 0.3.4
       defu: 6.1.4
       get-port-please: 3.1.2
-      h3: 1.15.1
+      h3: 1.12.0
       http-shutdown: 1.2.2
       jiti: 2.4.2
       mlly: 1.7.4
@@ -10878,6 +10870,8 @@ snapshots:
       ufo: 1.5.4
       untun: 0.1.3
       uqr: 0.1.2
+    transitivePeerDependencies:
+      - uWebSockets.js
 
   listr2@8.2.5:
     dependencies:
@@ -11114,7 +11108,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nitro-go@0.0.1(better-sqlite3@11.8.1)(typescript@5.8.2):
+  nitro-go@0.0.2(better-sqlite3@11.8.1)(typescript@5.8.2):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -11134,7 +11128,7 @@ snapshots:
       citty: 0.1.6
       compatx: 0.1.8
       confbox: 0.1.8
-      consola: 3.4.0
+      consola: 3.4.2
       cookie-es: 1.2.2
       croner: 8.1.2
       crossws: 0.3.4
@@ -11148,7 +11142,7 @@ snapshots:
       fs-extra: 11.3.0
       globby: 14.1.0
       gzip-size: 7.0.0
-      h3: h3-nightly@2.0.0-20260602-115454-7eb018e(crossws@0.3.4)
+      h3: 1.12.0
       hookable: 5.5.3
       httpxy: 0.1.7
       ioredis: 5.5.0
@@ -11211,6 +11205,7 @@ snapshots:
       - sqlite3
       - supports-color
       - typescript
+      - uWebSockets.js
       - uploadthing
 
   node-abi@3.74.0:
@@ -11228,8 +11223,6 @@ snapshots:
   node-forge@1.3.1: {}
 
   node-gyp-build@4.8.4: {}
-
-  node-mock-http@1.0.0: {}
 
   node-releases@2.0.19: {}
 
@@ -11828,8 +11821,6 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.34.9
       fsevents: 2.3.3
 
-  rou3@0.8.1: {}
-
   rtl-css-js@1.16.1:
     dependencies:
       '@babel/runtime': 7.26.9
@@ -12083,8 +12074,6 @@ snapshots:
       spdx-license-ids: 3.0.21
 
   spdx-license-ids@3.0.21: {}
-
-  srvx@0.11.16: {}
 
   stable-hash@0.0.4: {}
 
@@ -12476,7 +12465,7 @@ snapshots:
 
   unenv@1.10.0:
     dependencies:
-      consola: 3.4.0
+      consola: 3.4.2
       defu: 6.1.4
       mime: 3.0.0
       node-fetch-native: 1.6.6
@@ -12598,7 +12587,7 @@ snapshots:
       anymatch: 3.1.3
       chokidar: 4.0.3
       destr: 2.0.3
-      h3: 1.15.1
+      h3: 1.12.0
       lru-cache: 10.4.3
       node-fetch-native: 1.6.6
       ofetch: 1.4.1
@@ -12606,11 +12595,13 @@ snapshots:
     optionalDependencies:
       db0: 0.3.1(better-sqlite3@11.8.1)
       ioredis: 5.5.0
+    transitivePeerDependencies:
+      - uWebSockets.js
 
   untun@0.1.3:
     dependencies:
       citty: 0.1.6
-      consola: 3.4.0
+      consola: 3.4.2
       pathe: 1.1.2
 
   untyped@1.5.2:
@@ -12711,12 +12702,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-with-nitro@0.0.3(better-sqlite3@11.8.1)(crossws@0.3.4)(typescript@5.8.2)(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vite-plugin-with-nitro@0.0.5(better-sqlite3@11.8.1)(typescript@5.8.2)(vite@6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)):
     dependencies:
-      consola: 3.4.0
+      consola: 3.4.2
+      dayjs: 1.11.13(patch_hash=ab3d460b598ef9569bd8b88d40864d7b0e942a6d8b2e646643076a5c0477cc4d)
       defu: 6.1.4
-      h3: h3-nightly@2.0.0-20260602-115454-7eb018e(crossws@0.3.4)
-      nitropack: nitro-go@0.0.1(better-sqlite3@11.8.1)(typescript@5.8.2)
+      h3: 1.12.0
+      nitropack: nitro-go@0.0.2(better-sqlite3@11.8.1)(typescript@5.8.2)
       vite: 6.2.0(@types/node@22.13.9)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -12736,7 +12728,6 @@ snapshots:
       - '@vercel/kv'
       - aws4fetch
       - better-sqlite3
-      - crossws
       - drizzle-orm
       - encoding
       - idb-keyval
@@ -12745,6 +12736,7 @@ snapshots:
       - sqlite3
       - supports-color
       - typescript
+      - uWebSockets.js
       - uploadthing
       - xml2js
 
