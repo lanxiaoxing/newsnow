@@ -114,14 +114,6 @@
     "interval": 600000,
     "title": "快讯"
   },
-  "douyin": {
-    "name": "抖音",
-    "type": "hottest",
-    "column": "china",
-    "home": "https://www.douyin.com",
-    "color": "gray",
-    "interval": 600000
-  },
   "ifanr": {
     "name": "爱范儿",
     "type": "hottest",
@@ -344,6 +336,14 @@
     "column": "china",
     "home": "https://www.baidu.com",
     "color": "blue",
+    "interval": 600000
+  },
+  "douyin": {
+    "name": "抖音",
+    "type": "hottest",
+    "column": "china",
+    "home": "https://www.douyin.com",
+    "color": "gray",
     "interval": 600000
   }
 }

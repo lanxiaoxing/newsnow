@@ -9,7 +9,6 @@
   "wallstreetcn-news": "huaerjiejianwen-zuixinzixun",
   "wallstreetcn-hot": "huaerjiejianwen-zuirewenzhang",
   "36kr-quick": "36ke-kuaixun",
-  "douyin": "douyin",
   "ifanr": "aifaner",
   "tieba": "baidutieba-reyi",
   "toutiao": "jinritoutiao",
@@ -31,5 +30,6 @@
   "kuaishou": "kuaishou",
   "kaopu": "kaopuxinwen",
   "jin10": "jinshishuju",
-  "baidu": "baiduresou"
+  "baidu": "baiduresou",
+  "douyin": "douyin"
 }

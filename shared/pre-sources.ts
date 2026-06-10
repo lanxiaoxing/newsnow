@@ -100,13 +100,6 @@ export const originSources = {
       },
     },
   },
-  "douyin": {
-    name: "抖音",
-    type: "hottest",
-    column: "china",
-    color: "gray",
-    home: "https://www.douyin.com",
-  },
   "ifanr": {
     name: "爱范儿",
     type: "hottest",
@@ -297,6 +290,13 @@ export const originSources = {
     color: "blue",
     type: "hottest",
     home: "https://www.baidu.com",
+  },
+  "douyin": {
+    name: "抖音",
+    type: "hottest",
+    column: "china",
+    color: "gray",
+    home: "https://www.douyin.com",
   },
 } as const satisfies Record<string, OriginSource>
 
