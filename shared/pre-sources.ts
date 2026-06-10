@@ -266,18 +266,7 @@ export const originSources = {
       },
     },
   },
-  "bilibili": {
-    name: "哔哩哔哩",
-    color: "blue",
-    home: "https://www.bilibili.com",
-    sub: {
-      "hot-search": {
-        title: "热搜",
-        column: "china",
-        type: "hottest",
-      },
-    },
-  },
+
   "kuaishou": {
     name: "快手",
     type: "hottest",
