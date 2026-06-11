@@ -21,6 +21,9 @@ html.dark {
 
 body {
   --at-apply: color-base bg-base sprinkle-primary text-base;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
