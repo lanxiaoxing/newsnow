@@ -57,6 +57,14 @@
     "color": "orange",
     "interval": 600000
   },
+  "guozaoke": {
+    "name": "过早客",
+    "type": "hottest",
+    "column": "china",
+    "home": "https://www.guozaoke.com/",
+    "color": "green",
+    "interval": 600000
+  },
   "wallstreetcn": {
     "redirect": "wallstreetcn-quick",
     "name": "华尔街见闻",
