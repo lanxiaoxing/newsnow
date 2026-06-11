@@ -60,6 +60,7 @@
   "guozaoke": {
     "name": "过早客",
     "type": "hottest",
+    "disable": "cf",
     "column": "china",
     "home": "https://www.guozaoke.com/",
     "color": "green",

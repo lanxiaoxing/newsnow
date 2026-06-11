@@ -68,6 +68,7 @@ export const originSources = {
     column: "china",
     color: "green",
     type: "hottest",
+    disable: "cf",
     home: "https://www.guozaoke.com/",
   },
 
