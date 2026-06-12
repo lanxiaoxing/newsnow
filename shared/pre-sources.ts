@@ -15,7 +15,7 @@ const Time = {
 export const originSources = {
   "bbc": {
     name: "BBC News",
-    color: "gray",
+    color: "red",
     type: "hottest",
     home: "https://www.bbc.com/news",
     interval: Time.Common,
@@ -23,11 +23,11 @@ export const originSources = {
   "v2ex": {
     name: "V2EX",
     color: "slate",
+    type: "hottest",
     home: "https://v2ex.com/",
     sub: {
       share: {
         title: "最新分享",
-        column: "tech",
       },
     },
   },
@@ -36,7 +36,7 @@ export const originSources = {
     title: "实时热搜",
     type: "hottest",
     column: "china",
-    color: "red",
+    color: "amber",
     interval: Time.Realtime,
     home: "https://weibo.com",
   },
@@ -58,7 +58,7 @@ export const originSources = {
   },
   "smzdm": {
     name: "什么值得买",
-    color: "orange",
+    color: "rose",
     column: "tech",
     type: "hottest",
     home: "https://www.smzdm.com",
@@ -66,7 +66,7 @@ export const originSources = {
   "guozaoke": {
     name: "过早客",
     column: "china",
-    color: "green",
+    color: "teal",
     type: "hottest",
     disable: "cf",
     home: "https://www.guozaoke.com/",
@@ -125,21 +125,21 @@ export const originSources = {
     title: "热议",
     column: "china",
     type: "hottest",
-    color: "blue",
+    color: "sky",
     home: "https://tieba.baidu.com",
   },
   "toutiao": {
     name: "今日头条",
     type: "hottest",
     column: "china",
-    color: "red",
+    color: "orange",
     home: "https://www.toutiao.com",
   },
   "coolapk": {
     name: "酷安",
     type: "hottest",
     column: "tech",
-    color: "green",
+    color: "lime",
     title: "今日最热",
     home: "https://coolapk.com",
   },
@@ -149,12 +149,12 @@ export const originSources = {
     type: "hottest",
     column: "china",
     title: "热榜",
-    color: "gray",
+    color: "pink",
     home: "https://www.thepaper.cn",
   },
   "wuhan": {
     name: "武汉天气",
-    color: "pink",
+    color: "cyan",
     type: "hottest",
     interval: Time.Slow,
     home: "https://www.weather.com.cn",
@@ -197,7 +197,7 @@ export const originSources = {
   },
   "xueqiu": {
     name: "雪球",
-    color: "blue",
+    color: "indigo",
     home: "https://xueqiu.com",
     column: "finance",
     sub: {
@@ -272,7 +272,7 @@ export const originSources = {
     name: "快手",
     type: "hottest",
     column: "china",
-    color: "orange",
+    color: "amber",
     // cloudflare pages cannot access
     disable: "cf",
     home: "https://www.kuaishou.com",
@@ -303,7 +303,7 @@ export const originSources = {
     name: "抖音",
     type: "hottest",
     column: "china",
-    color: "gray",
+    color: "zinc",
     home: "https://www.douyin.com",
   },
 } as const satisfies Record<string, OriginSource>

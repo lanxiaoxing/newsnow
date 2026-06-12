@@ -3,13 +3,13 @@
     "name": "BBC News",
     "type": "hottest",
     "home": "https://www.bbc.com/news",
-    "color": "gray",
+    "color": "red",
     "interval": 1800000
   },
   "v2ex": {
     "redirect": "v2ex-share",
     "name": "V2EX",
-    "column": "tech",
+    "type": "hottest",
     "home": "https://v2ex.com/",
     "color": "slate",
     "interval": 600000,
@@ -17,7 +17,7 @@
   },
   "v2ex-share": {
     "name": "V2EX",
-    "column": "tech",
+    "type": "hottest",
     "home": "https://v2ex.com/",
     "color": "slate",
     "interval": 600000,
@@ -29,7 +29,7 @@
     "type": "hottest",
     "column": "china",
     "home": "https://weibo.com",
-    "color": "red",
+    "color": "amber",
     "interval": 120000
   },
   "zaobao": {
@@ -54,7 +54,7 @@
     "type": "hottest",
     "column": "tech",
     "home": "https://www.smzdm.com",
-    "color": "orange",
+    "color": "rose",
     "interval": 600000
   },
   "guozaoke": {
@@ -63,7 +63,7 @@
     "disable": "cf",
     "column": "china",
     "home": "https://www.guozaoke.com/",
-    "color": "green",
+    "color": "teal",
     "interval": 600000
   },
   "wallstreetcn": {
@@ -137,7 +137,7 @@
     "type": "hottest",
     "column": "china",
     "home": "https://tieba.baidu.com",
-    "color": "blue",
+    "color": "sky",
     "interval": 600000
   },
   "toutiao": {
@@ -145,7 +145,7 @@
     "type": "hottest",
     "column": "china",
     "home": "https://www.toutiao.com",
-    "color": "red",
+    "color": "orange",
     "interval": 600000
   },
   "coolapk": {
@@ -154,7 +154,7 @@
     "type": "hottest",
     "column": "tech",
     "home": "https://coolapk.com",
-    "color": "green",
+    "color": "lime",
     "interval": 600000
   },
   "thepaper": {
@@ -163,7 +163,7 @@
     "type": "hottest",
     "column": "china",
     "home": "https://www.thepaper.cn",
-    "color": "gray",
+    "color": "pink",
     "interval": 1800000
   },
   "wuhan": {
@@ -171,7 +171,7 @@
     "type": "hottest",
     "desc": "武汉实时天气与未来预报",
     "home": "https://www.weather.com.cn",
-    "color": "pink",
+    "color": "cyan",
     "interval": 3600000
   },
   "sputniknewscn": {
@@ -231,7 +231,7 @@
     "type": "hottest",
     "column": "finance",
     "home": "https://xueqiu.com",
-    "color": "blue",
+    "color": "indigo",
     "interval": 120000,
     "title": "热门股票"
   },
@@ -240,7 +240,7 @@
     "type": "hottest",
     "column": "finance",
     "home": "https://xueqiu.com",
-    "color": "blue",
+    "color": "indigo",
     "interval": 120000,
     "title": "热门股票"
   },
@@ -320,7 +320,7 @@
     "disable": "cf",
     "column": "china",
     "home": "https://www.kuaishou.com",
-    "color": "orange",
+    "color": "amber",
     "interval": 600000
   },
   "kaopu": {
@@ -352,7 +352,7 @@
     "type": "hottest",
     "column": "china",
     "home": "https://www.douyin.com",
-    "color": "gray",
+    "color": "zinc",
     "interval": 600000
   }
 }
