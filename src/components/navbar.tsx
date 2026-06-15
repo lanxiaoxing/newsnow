@@ -15,7 +15,9 @@ export function NavBar() {
         type="button"
         onClick={() => toggle(true)}
         className={$(
-          "px-2 hover:(bg-primary/10 rounded-md) op-70 dark:op-90",
+          "px-3 py-1 rounded-md transition-all duration-200",
+          "hover:bg-primary/15 active:bg-primary/25",
+          "op-70 dark:op-90 hover:op-100",
         )}
       >
         更多
@@ -26,8 +28,11 @@ export function NavBar() {
           to="/c/$column"
           params={{ column: columnId }}
           className={$(
-            "px-2 hover:(bg-primary/10 rounded-md)",
-            currentId === columnId ? "color-primary font-bold" : "op-70 dark:op-90",
+            "px-3 py-1 rounded-md transition-all duration-200",
+            "hover:bg-primary/10 active:bg-primary/20",
+            currentId === columnId
+              ? "bg-primary/15 color-primary font-bold shadow-sm"
+              : "op-70 dark:op-90 hover:op-100",
           )}
         >
           {metadata[columnId].name}

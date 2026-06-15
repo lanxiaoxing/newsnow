@@ -247,9 +247,10 @@ function NewsListHot({ items, color }: { items: NewsItem[], color: string }) {
           )}
         >
           <span className={$(
-            "min-w-6 h-6 shrink-0 flex justify-center items-center rounded-md text-sm font-semibold",
+            "min-w-6 h-6 shrink-0 flex justify-center items-center rounded-lg text-sm font-semibold",
+            "transition-shadow duration-200",
             i < 3
-              ? `bg-${color}-500 color-white`
+              ? `bg-${color}-500 color-white shadow-sm`
               : "bg-neutral-500/15 op-90",
           )}
           >

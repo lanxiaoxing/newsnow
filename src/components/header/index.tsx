@@ -43,13 +43,15 @@ export function Header() {
   return (
     <>
       <span className="flex justify-self-start">
-        <Link to="/" className="flex gap-2 items-center">
-          <div className="h-10 w-10 bg-cover" title="logo" style={{ backgroundImage: "url(/icon.svg)" }} />
+        <Link to="/" className="flex gap-3 items-center group">
+          <div className="relative">
+            <div className="h-14 w-14 bg-cover transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 rounded-2xl p-1 bg-gradient-to-br from-primary/20 to-primary/5" title="logo" style={{ backgroundImage: "url(/icon.svg)" }} />
+          </div>
           <span className="text-2xl font-brand line-height-none!">
-            <p>Joey'</p>
+            <p className="font-medium tracking-tight">Joey'</p>
             <p className="mt--1">
-              <span className="color-primary-6">N</span>
-              <span>etwork</span>
+              <span className="color-primary-5 font-bold text-3xl drop-shadow-sm">N</span>
+              <span className="font-medium">etwork</span>
             </p>
           </span>
         </Link>
