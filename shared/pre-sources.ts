@@ -141,7 +141,7 @@ export const originSources = {
     column: "tech",
     color: "lime",
     title: "今日最热",
-    home: "https://coolapk.com",
+    home: "https://www.coolapk.com",
   },
   "thepaper": {
     name: "澎湃新闻",

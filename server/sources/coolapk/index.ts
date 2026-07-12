@@ -9,6 +9,7 @@ interface Res {
     // 起的标题
     editor_title: string
     shareUrl: string
+    url: string
     entityType: string
     pubDate: string
     // dayjs(dateline, 'X')
@@ -30,7 +31,7 @@ export default defineSource({
     return r.data.filter(k => k.id).map(i => ({
       id: i.id,
       title: i.editor_title || load(i.message).text().split("\n")[0],
-      url: i.shareUrl,
+      url: i.url ? `https://www.coolapk.com${i.url}` : `https://www.coolapk.com/feed/${i.id}`,
       extra: {
         info: i.targetRow?.subTitle,
         // date: new Date(i.dateline * 1000).getTime(),
